@@ -15,14 +15,14 @@ function hexToRgba(hex: string, alpha: number): string {
 }
 
 const Pill = styled("span")<{ $color: string }>(({ $color }) => ({
-  fontSize: 12,
+  fontSize: 11,
   lineHeight: 1.4,
   fontWeight: 600,
   color: $color,
   backgroundColor: hexToRgba($color, 0.15),
   border: `1px solid ${hexToRgba($color, 0.45)}`,
   borderRadius: 999,
-  padding: "2px 10px",
+  padding: "1px 8px",
   whiteSpace: "nowrap",
 }));
 
@@ -38,8 +38,8 @@ function BreakdownPill({
 
 const ChipGrid = styled("div")({
   display: "grid",
-  gridTemplateColumns: "repeat(3, 36px)",
-  gap: 12,
+  gridTemplateColumns: "repeat(3, 30px)",
+  gap: 10,
   justifyContent: "flex-start",
 });
 
@@ -51,8 +51,8 @@ const ChipBox = styled("div")<{
   $animation?: string;
   $opacity?: number;
 }>(({ $bg, $color, $border, $boxShadow, $animation, $opacity }) => ({
-  width: 36,
-  height: 36,
+  width: 30,
+  height: 30,
   borderRadius: "50%",
   backgroundColor: $bg,
   border: $border,
@@ -60,7 +60,7 @@ const ChipBox = styled("div")<{
   alignItems: "center",
   justifyContent: "center",
   fontWeight: 700,
-  fontSize: 18,
+  fontSize: 15,
   color: $color,
   boxShadow: $boxShadow,
   animation: $animation,
@@ -278,9 +278,9 @@ export function DiceResultsBreakdown({
       <Stack
         overflow="visible"
         sx={{
-          px: 1.5,
-          py: 1.5,
-          gap: 1.5,
+          px: 1,
+          py: 1,
+          gap: 1,
           alignItems: "flex-start",
         }}
       >

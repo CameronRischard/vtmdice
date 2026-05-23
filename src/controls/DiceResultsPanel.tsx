@@ -34,8 +34,8 @@ export function DiceResultsPanel() {
     <Box
       sx={{
         alignSelf: "flex-start",
-        minWidth: 180,
-        maxWidth: 220,
+        minWidth: 150,
+        maxWidth: 180,
         py: 2,
       }}
       component="div"
