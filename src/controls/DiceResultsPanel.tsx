@@ -35,7 +35,8 @@ export function DiceResultsPanel() {
       sx={{
         alignSelf: "flex-start",
         width: "fit-content",
-        py: 2,
+        pt: 2,
+        pr: 1,
       }}
       component="div"
     >

@@ -278,8 +278,8 @@ export function DiceResultsBreakdown({
       <Stack
         overflow="visible"
         sx={{
-          px: 1,
-          py: 1,
+          px: 0.5,
+          py: 0.5,
           gap: 1,
           alignItems: "flex-start",
         }}

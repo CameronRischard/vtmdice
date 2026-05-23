@@ -7,7 +7,7 @@ import { useDiceRollStore } from "../dice/store";
 
 const THROTTLE_TIME = 100;
 const SIDEBAR_WIDTH = 60;
-const PANEL_WIDTH = 140;
+const PANEL_WIDTH = 115;
 
 /**
  * Keep the popover width sized to fit the sidebar + tray (calc(100vh / 2))
