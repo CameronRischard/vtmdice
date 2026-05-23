@@ -278,10 +278,10 @@ export function DiceResultsBreakdown({
       <Stack
         overflow="visible"
         sx={{
-          px: 0.5,
+          px: 1,
           py: 0.5,
           gap: 1,
-          alignItems: "flex-start",
+          alignItems: "center",
         }}
       >
         <ChipGrid>
@@ -289,7 +289,7 @@ export function DiceResultsBreakdown({
             <DieChip key={d.id} die={d} />
           ))}
         </ChipGrid>
-        <Stack direction="column" gap={0.75} alignItems="flex-start">
+        <Stack direction="column" gap={0.75} alignItems="center">
           <BreakdownPill color="#7ed957">
             {result.baseSuccesses}{" "}
             {result.baseSuccesses === 1 ? "success" : "successes"}
