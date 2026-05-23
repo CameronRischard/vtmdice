@@ -8,8 +8,6 @@ import Fade from "@mui/material/Fade";
 import { useTheme, keyframes } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import ButtonBase from "@mui/material/ButtonBase";
-import Typography from "@mui/material/Typography";
-
 import CloseIcon from "@mui/icons-material/CloseRounded";
 import HiddenIcon from "@mui/icons-material/VisibilityOffRounded";
 import RollIcon from "@mui/icons-material/ArrowForwardRounded";
@@ -264,43 +262,6 @@ function DicePickedControls() {
           </IconButton>
         </Tooltip>
       </Stack>
-      <Stack
-        sx={{
-          position: "absolute",
-          top: 12,
-          left: 24,
-        }}
-      >
-        {advantage && (
-          <Typography
-            textAlign="left"
-            lineHeight="40px"
-            color="white"
-            variant="h6"
-          >
-            {advantage === "ADVANTAGE" ? "Adv" : "Dis"}
-          </Typography>
-        )}
-      </Stack>
-      <Stack
-        sx={{
-          position: "absolute",
-          top: 12,
-          right: 24,
-        }}
-      >
-        {bonus !== 0 && (
-          <Typography
-            textAlign="right"
-            variant="h6"
-            lineHeight="40px"
-            color="white"
-          >
-            {bonus > 0 && "+"}
-            {bonus}
-          </Typography>
-        )}
-      </Stack>
     </>
   );
 }
@@ -321,11 +282,9 @@ function FinishedRollControls() {
     return values;
   }, [rollValues]);
 
-  const [resultsExpanded, setResultsExpanded] = useState(false);
-
   return (
     <>
-      <GradientOverlay top height={resultsExpanded ? 500 : undefined} />
+      <GradientOverlay top />
       <Box
         sx={{
           position: "absolute",
@@ -377,8 +336,6 @@ function FinishedRollControls() {
           <DiceResults
             diceRoll={roll}
             rollValues={finishedRollValues}
-            expanded={resultsExpanded}
-            onExpand={setResultsExpanded}
           />
         )}
         {roll?.hidden && (

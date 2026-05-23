@@ -1,17 +1,17 @@
 {
-  "name": "Dice",
-  "version": "2.0.0",
+  "name": "VtM Dice",
+  "version": "0.1.0",
   "manifest_version": 1,
-  "author": "Owlbear Rodeo",
-  "homepage_url": "https://extensions.owlbear.rodeo/dice",
-  "icon": "/logo.png",
-  "description": "Beautiful 3D dice extension for d20 based systems",
+  "author": "CameronRischard",
+  "homepage_url": "https://cameronrischard.github.io/vtmdice/",
+  "icon": "https://cameronrischard.github.io/vtmdice/logo.png",
+  "description": "Vampire the Masquerade V5 dice roller with hunger dice, criticals, and bestial failures.",
   "action": {
-    "title": "Dice",
-    "icon": "/icon.svg",
-    "popover": "/",
+    "title": "VtM Dice",
+    "icon": "https://cameronrischard.github.io/vtmdice/icon.svg",
+    "popover": "https://cameronrischard.github.io/vtmdice/",
     "height": 700,
-    "width": 375
+    "width": 600
   },
-  "background_url": "/background.html"
+  "background_url": "https://cameronrischard.github.io/vtmdice/background.html"
 }

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   ContactShadows,
   Environment,
@@ -98,7 +97,6 @@ function PlayerTrayResults({ player }: { player?: Player }) {
   const { diceRoll, finalValue, finishedRollValues, finishedRolling } =
     usePlayerDice(player);
 
-  const [resultsExpanded, setResultsExpanded] = useState(false);
   return (
     <>
       {diceRoll?.hidden && (
@@ -111,7 +109,7 @@ function PlayerTrayResults({ player }: { player?: Player }) {
       {finalValue !== null && (
         <>
           <Fade in>
-            <GradientOverlay top height={resultsExpanded ? 500 : undefined} />
+            <GradientOverlay top />
           </Fade>
           <GradientOverlay />
           <Fade in>
@@ -139,8 +137,6 @@ function PlayerTrayResults({ player }: { player?: Player }) {
                     <DiceResults
                       diceRoll={diceRoll}
                       rollValues={finishedRollValues}
-                      expanded={resultsExpanded}
-                      onExpand={setResultsExpanded}
                     />
                   )}
               </Stack>

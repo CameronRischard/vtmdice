@@ -16,6 +16,8 @@ interface DiceControlsState {
   diceCounts: DiceCounts;
   diceBonus: number;
   diceAdvantage: Advantage;
+  diceDifficulty: number | null;
+  diceResultsExpanded: boolean;
   diceHidden: boolean;
   diceRollPressTime: number | null;
   fairnessTesterOpen: boolean;
@@ -26,6 +28,8 @@ interface DiceControlsState {
   decrementDieCount: (id: string) => void;
   setDiceAdvantage: (advantage: Advantage) => void;
   setDiceBonus: (bonus: number) => void;
+  setDiceDifficulty: (difficulty: number | null) => void;
+  toggleDiceResultsExpanded: () => void;
   toggleDiceHidden: () => void;
   setDiceRollPressTime: (time: number | null) => void;
   toggleFairnessTester: () => void;
@@ -43,6 +47,8 @@ export const useDiceControlsStore = create<DiceControlsState>()(
     diceCounts: initialDiceCounts,
     diceBonus: 0,
     diceAdvantage: null,
+    diceDifficulty: null,
+    diceResultsExpanded: true,
     diceHidden: false,
     diceRollPressTime: null,
     fairnessTesterOpen: false,
@@ -101,6 +107,16 @@ export const useDiceControlsStore = create<DiceControlsState>()(
     setDiceAdvantage(advantage) {
       set((state) => {
         state.diceAdvantage = advantage;
+      });
+    },
+    setDiceDifficulty(difficulty) {
+      set((state) => {
+        state.diceDifficulty = difficulty;
+      });
+    },
+    toggleDiceResultsExpanded() {
+      set((state) => {
+        state.diceResultsExpanded = !state.diceResultsExpanded;
       });
     },
     toggleDiceHidden() {
