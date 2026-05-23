@@ -38,7 +38,7 @@ function BreakdownPill({
 
 const ChipGrid = styled("div")({
   display: "grid",
-  gridTemplateColumns: "repeat(3, 30px)",
+  gridTemplateColumns: "repeat(2, 30px)",
   gap: 10,
   justifyContent: "flex-start",
 });
