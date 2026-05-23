@@ -28,6 +28,7 @@ export function InteractiveTray() {
       borderRadius={1}
       height="100vh"
       width="calc(100vh / 2)"
+      flexShrink={0}
       overflow="hidden"
       position="relative"
       id="interactive-tray"
