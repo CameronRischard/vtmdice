@@ -8,7 +8,7 @@ import { DiceResultsPanel } from "./controls/DiceResultsPanel";
 export function App() {
   return (
     <Container disableGutters maxWidth="md">
-      <Stack direction="row" justifyContent="center">
+      <Stack direction="row">
         <Sidebar />
         <InteractiveTray />
         <DiceResultsPanel />
